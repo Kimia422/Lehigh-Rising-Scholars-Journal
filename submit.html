@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit | Lehigh Rising Scholars Journal</title>
+  <link rel="icon" type="image/x-icon" href="lehighlogomain.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lehighBrown: '#653819',
+            lehighYellow: '#FED141',
+            accentBrown: '#4A2B13',
+            lightBrown: '#F5EEE8',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #653819 0%, #4A2B13 100%);
+    }
+    .shadow-custom {
+      box-shadow: 0 4px 20px rgba(101, 56, 25, 0.2);
+    }
+    .submit-btn {
+      transition: all 0.3s ease;
+    }
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(101, 56, 25, 0.3);
+    }
+    .file-input-label:hover {
+      background-color: #4A2B13;
+    }
+    .nav-link:hover {
+      color: #FED141;
+    }
+    .animated-underline {
+      position: relative;
+    }
+    .animated-underline:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #FED141;
+      transition: width 0.3s ease;
+    }
+    .animated-underline:hover:after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+  <!-- Header -->
+  <header class="gradient-bg text-white">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0">
+          <img src="lehighlogomain.png" alt="Lehigh Logo" class="h-32 mr-4" />
+          <div>
+            <h1 class="text-4xl md:text-5xl font-bold">Lehigh Rising Scholars Journal</h1>
+            <p class="text-lehighYellow text-lg md:text-xl">Promoting academic excellence through peer review</p>
+          </div>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="index.html" class="nav-link animated-underline text-white">Home</a>
+          <a href="about.html" class="nav-link animated-underline text-white">About</a>
+          <a href="submit.html" class="nav-link animated-underline text-white">Submit</a>
+          <a href="archive.html" class="nav-link animated-underline text-white">Archive</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Submission Form -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-lehighBrown mb-4">Submit Your Manuscript</h2>
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+          Complete the form below to submit your research for peer review. Please ensure your manuscript meets our submission guidelines before proceeding.
+        </p>
+      </div>
+
+      <form id="submissionForm" class="bg-lightBrown p-8 rounded-lg shadow-custom">
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-lehighBrown mb-6 border-b border-lehighBrown pb-2">Author Information</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="firstName" class="block text-lehighBrown font-medium mb-2">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lehighYellow" />
+            </div>
+            <div>
+              <label for="lastName" class="block text-lehighBrown font-medium mb-2">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lehighYellow" />
+            </div>
+            <div>
+              <label for="email" class="block text-lehighBrown font-medium mb-2">Email *</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lehighYellow" />
+            </div>
+            <div class="md:col-span-2">
+              <label for="department" class="block text-lehighBrown font-medium mb-2">Department/Program *</label>
+              <input type="text" id="department" name="department" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lehighYellow" />
+            </div>
+            <div class="md:col-span-2">
+              <label for="lehighStatus" class="block text-lehighBrown font-medium mb-2">What is your current academic status at Lehigh? *</label>
+              <select id="lehighStatus" name="lehighStatus" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lehighYellow">
+                <option value="">Select your role</option>
+                <option value="undergraduate">Undergraduate student</option>
+                <option value="masters">Master’s student</option>
+                <option value="phd">PhD student</option>
+                <option value="postdoc">Postdoctoral researcher</option>
+                <option value="faculty">Faculty member</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-lehighBrown mb-6 border-b border-lehighBrown pb-2">Manuscript Details</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="title" class="block text-lehighBrown font-medium mb-2">Title *</label>
+              <input type="text" id="title" name="title" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lehighYellow" />
+            </div>
+            <div>
+              <label for="discipline" class="block text-lehighBrown font-medium mb-2">Discipline *</label>
+              <select id="discipline" name="discipline" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lehighYellow">
+                <option value="">Select a discipline</option>
+                <option value="humanities">Humanities</option>
+                <option value="social_sciences">Social Sciences</option>
+                <option value="natural_sciences">Natural Sciences</option>
+                <option value="engineering">Engineering</option>
+                <option value="business">Business</option>
+                <option value="arts">Arts</option>
+                <option value="interdisciplinary">Interdisciplinary</option>
+              </select>
+            </div>
+            <div>
+              <label for="keywords" class="block text-lehighBrown font-medium mb-2">Keywords (comma separated) *</label>
+              <input type="text" id="keywords" name="keywords" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lehighYellow" />
+            </div>
+            <div>
+              <label for="wordCount" class="block text-lehighBrown font-medium mb-2">Word Count *</label>
+              <input type="number" id="wordCount" name="wordCount" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lehighYellow" />
+            </div>
+          </div>
+          <div class="mt-6">
+            <label for="abstract" class="block text-lehighBrown font-medium mb-2">Abstract *</label>
+            <textarea id="abstract" name="abstract" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lehighYellow"></textarea>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-lehighBrown mb-6 border-b border-lehighBrown pb-2">Upload Files</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-lehighBrown font-medium mb-2">Manuscript File *</label>
+              <input id="manuscriptFile" name="manuscriptFile" type="file" required accept=".pdf,.doc,.docx" class="block w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-lehighYellow file:text-lehighBrown hover:file:bg-yellow-300" />
+            </div>
+            <div>
+              <label class="block text-lehighBrown font-medium mb-2">Supplementary Files (Optional)</label>
+              <input id="supplementaryFiles" name="supplementaryFiles" type="file" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png" class="block w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-lehighYellow file:text-lehighBrown hover:file:bg-yellow-300" />
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-lehighBrown mb-6 border-b border-lehighBrown pb-2">Ethics Statement</h3>
+          <div class="space-y-4">
+            <label class="flex items-start space-x-3">
+              <input type="checkbox" id="originalWork" name="originalWork" required class="h-4 w-4 text-lehighBrown border-gray-300 rounded" />
+              <span class="text-sm text-lehighBrown">I confirm this is my original work</span>
+            </label>
+            <label class="flex items-start space-x-3">
+              <input type="checkbox" id="ethicsApproval" name="ethicsApproval" required class="h-4 w-4 text-lehighBrown border-gray-300 rounded" />
+              <span class="text-sm text-lehighBrown">Ethics approval obtained (if applicable)</span>
+            </label>
+            <label class="flex items-start space-x-3">
+              <input type="checkbox" id="conflictInterest" name="conflictInterest" required class="h-4 w-4 text-lehighBrown border-gray-300 rounded" />
+              <span class="text-sm text-lehighBrown">No conflicts of interest</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="flex justify-end">
+          <button type="submit" class="bg-lehighBrown text-white font-bold py-3 px-8 rounded-full submit-btn hover:bg-accentBrown flex items-center">
+            <span>Submit Manuscript</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-accentBrown text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Lehigh Rising Scholars Journal</h3>
+          <p class="mb-4">Promoting academic excellence through peer-reviewed student research.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-lehighYellow transition duration-300">Home</a></li>
+            <li><a href="about.html" class="hover:text-lehighYellow transition duration-300">About</a></li>
+            <li><a href="submit.html" class="hover:text-lehighYellow transition duration-300">Submit</a></li>
+            <li><a href="archive.html" class="hover:text-lehighYellow transition duration-300">Archive</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-lehighYellow transition duration-300">Author Guidelines</a></li>
+            <li><a href="#" class="hover:text-lehighYellow transition duration-300">Ethics Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Contact</h4>
+          <address class="not-italic">
+            <p class="mb-2">Lehigh Rising Scholars Journal</p>
+            <p class="mb-2">Lehigh University</p>
+            <p class="mb-2">27 Memorial Drive West</p>
+            <p class="mb-2">Bethlehem, PA 18015</p>
+            <p class="mb-2"><a href="mailto:scholars@lehigh.edu" class="hover:text-lehighYellow transition duration-300">scholars@lehigh.edu</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="border-t border-lehighBrown/30 mt-8 pt-8 text-center">
+        <p>&copy; 2023 Lehigh Rising Scholars Journal. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
