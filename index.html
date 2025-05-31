@@ -85,7 +85,7 @@
     <section class="gradient-bg text-white py-16">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Share Your Research With The World</h2>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">The Lehigh Rising Scholars Journal provides a platform for emerging researchers to publish their work through a rigorous peer-review process.</p>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">The Lehigh Rising Scholars Journal provides a platform for emerging researchers at Lehigh University to publish their work through a rigorous peer-review process.</p>
             <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
                 <a href="#submit" class="bg-lehighYellow text-lehighBrown font-bold py-3 px-8 rounded-full submit-btn text-lg">Submit Manuscript</a>
                 <a href="#" class="border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-lehighBrown transition duration-300 text-lg">Learn More</a>
@@ -99,8 +99,8 @@
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
                     <h2 class="text-3xl font-bold text-lehighBrown mb-6">About The Journal</h2>
-                    <p class="text-lg text-gray-700 mb-4">The Lehigh Rising Scholars Journal is a student-run, peer-reviewed academic journal dedicated to publishing high-quality research from emerging scholars across all disciplines.</p>
-                    <p class="text-lg text-gray-700 mb-4">Our mission is to provide a platform for undergraduate and graduate students to share their work, gain valuable peer-review experience, and contribute to the academic community.</p>
+                    <p class="text-lg text-gray-700 mb-4">The Lehigh Rising Scholars Journal is a student-run, peer-reviewed academic journal dedicated to publishing high-quality research from emerging scholars across Rossin College of Engineering at Lehigh University.</p>
+                    <p class="text-lg text-gray-700 mb-4">Our mission is to provide a platform for undergraduate and graduate students to share their work, gain valuable peer-review experience, showcase their work to the public, and contribute to the academic community.</p>
                     <p class="text-lg text-gray-700">Each submission undergoes a rigorous review process by PhD student reviewers to ensure academic excellence and integrity.</p>
                 </div>
                 <div class="md:w-1/2">
@@ -125,7 +125,7 @@
                                 <div class="bg-lehighYellow rounded-full h-10 w-10 flex items-center justify-center text-lehighBrown font-bold mr-4 flex-shrink-0">3</div>
                                 <div>
                                     <h4 class="font-bold text-lehighBrown">Peer Review</h4>
-                                    <p class="text-gray-700">Peer review by at least two experts</p>
+                                    <p class="text-gray-700">Feedback by at least two experts</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -166,14 +166,22 @@
                             <label for="email" class="block text-lehighBrown font-medium mb-2">Email *</label>
                             <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lehighYellow">
                         </div>
-                        <div>
-                            <label for="institution" class="block text-lehighBrown font-medium mb-2">Institution *</label>
-                            <input type="text" id="institution" name="institution" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lehighYellow">
-                        </div>
                         <div class="md:col-span-2">
                             <label for="department" class="block text-lehighBrown font-medium mb-2">Department/Program *</label>
                             <input type="text" id="department" name="department" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lehighYellow">
                         </div>
+                         <div class="md:col-span-2">
+                            <label for="lehighStatus" class="block text-lehighBrown font-medium mb-2">What is your current academic status at Lehigh? *</label>
+                            <select id="lehighStatus" name="lehighStatus" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lehighYellow">
+                                <option value="">Select your role</option>
+                                <option value="undergraduate">Undergraduate student</option>
+                                <option value="masters">Master’s student</option>
+                                <option value="phd">PhD student</option>
+                                <option value="postdoc">Postdoctoral researcher</option>
+                                <option value="faculty">Faculty member</option>
+                                <option value="other">Other</option>
+                            </select>
+                             </div>
                     </div>
                 </div>
 
@@ -290,7 +298,7 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-lehighBrown mb-4">Our Peer Review Process</h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto">We maintain the highest academic standards through a transparent and rigorous review process</p>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">We maintain the highest academic standards through a transparent and rigorous review process.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -328,7 +336,7 @@
                         <i class="fas fa-chevron-down text-lehighBrown transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden px-4 pb-4 pt-2 bg-white">
-                        <p class="text-gray-700">The Lehigh Rising Scholars Journal accepts submissions from undergraduate and graduate students at accredited institutions worldwide. Faculty submissions are also welcome for special issues or as invited contributions.</p>
+                        <p class="text-gray-700">The Lehigh Rising Scholars Journal accepts submissions from undergraduate and graduate students at the Rossin College of Engineering at Lehigh University. Faculty submissions are also welcome for the Spotlights section or as invited contributions.</p>
                     </div>
                 </div>
                 
@@ -338,7 +346,7 @@
                         <i class="fas fa-chevron-down text-lehighBrown transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden px-4 pb-4 pt-2 bg-white">
-                        <p class="text-gray-700">We accept original research articles, review articles, case studies, and theoretical papers across all academic disciplines. Manuscripts should be between 3,000-8,000 words (excluding references) and follow our formatting guidelines.</p>
+                        <p class="text-gray-700">We accept original research articles from Lehigh's Rossin College of Engineering undergraduate students. We also welcome science communication articles written by graduate students at the Rossin College of Engineering, intended for a general public audience. All manuscripts should follow our formatting guidelines.</p>
                     </div>
                 </div>
                 
@@ -358,7 +366,7 @@
                         <i class="fas fa-chevron-down text-lehighBrown transition-transform duration-300"></i>
                     </button>
                     <div class="faq-content hidden px-4 pb-4 pt-2 bg-white">
-                        <p class="text-gray-700">There is no fee to submit or publish in the Lehigh Rising Scholars Journal. We are committed to open access and supported by Lehigh University's Office of Research.</p>
+                        <p class="text-gray-700">There is no fee to submit or publish in the Lehigh Rising Scholars Journal. We are committed to open access and supported by Lehigh University.</p>
                     </div>
                 </div>
                 
