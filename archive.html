@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archive | Lehigh Rising Scholars Journal</title>
+  <link rel="icon" type="image/x-icon" href="lehighlogomain.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lehighBrown: '#653819',
+            lehighYellow: '#FED141',
+            accentBrown: '#4A2B13',
+            lightBrown: '#F5EEE8',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #653819 0%, #4A2B13 100%);
+    }
+    .nav-link:hover {
+      color: #FED141;
+    }
+    .animated-underline {
+      position: relative;
+    }
+    .animated-underline:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #FED141;
+      transition: width 0.3s ease;
+    }
+    .animated-underline:hover:after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+  <!-- Header -->
+  <header class="gradient-bg text-white">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0">
+          <img src="lehighlogomain.png" alt="Lehigh Logo" class="h-32 mr-4" />
+          <div>
+            <h1 class="text-4xl md:text-5xl font-bold">Lehigh Rising Scholars Journal</h1>
+            <p class="text-lehighYellow text-lg md:text-xl">Promoting academic excellence through peer review</p>
+          </div>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="index.html" class="nav-link animated-underline text-white">Home</a>
+          <a href="about.html" class="nav-link animated-underline text-white">About</a>
+          <a href="submit.html" class="nav-link animated-underline text-white">Submit</a>
+          <a href="archive.html" class="nav-link animated-underline text-white">Archive</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Archive Section -->
+  <section class="py-20 bg-lightBrown">
+    <div class="container mx-auto px-4 max-w-3xl text-center">
+      <h2 class="text-3xl font-bold text-lehighBrown mb-4">Journal Archive</h2>
+      <p class="text-lg text-gray-700 mb-8">
+        The <strong>Lehigh Rising Scholars Journal</strong> will publish high-quality research articles and science communication pieces from undergraduate and graduate students at Lehigh University.
+      </p>
+      <div class="bg-white p-8 rounded-lg shadow-custom">
+        <h3 class="text-xl font-semibold text-lehighBrown mb-2">No issues published yet</h3>
+        <p class="text-gray-700">
+          We’re currently reviewing submissions for our inaugural issue. Once published, past issues and accepted articles will be available here.
+        </p>
+      </div>
+      <div class="mt-8">
+        <a href="submit.html" class="inline-block bg-lehighBrown text-white font-bold py-3 px-8 rounded-full hover:bg-accentBrown transition duration-300">
+          Submit Your Work
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-accentBrown text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Lehigh Rising Scholars Journal</h3>
+          <p class="mb-4">Promoting academic excellence through peer-reviewed student research.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-lehighYellow transition duration-300">Home</a></li>
+            <li><a href="about.html" class="hover:text-lehighYellow transition duration-300">About</a></li>
+            <li><a href="submit.html" class="hover:text-lehighYellow transition duration-300">Submit</a></li>
+            <li><a href="archive.html" class="hover:text-lehighYellow transition duration-300">Archive</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-lehighYellow transition duration-300">Author Guidelines</a></li>
+            <li><a href="#" class="hover:text-lehighYellow transition duration-300">Ethics Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Contact</h4>
+          <address class="not-italic">
+            <p class="mb-2">Lehigh Rising Scholars Journal</p>
+            <p class="mb-2">Lehigh University</p>
+            <p class="mb-2">27 Memorial Drive West</p>
+            <p class="mb-2">Bethlehem, PA 18015</p>
+            <p class="mb-2"><a href="mailto:scholars@lehigh.edu" class="hover:text-lehighYellow transition duration-300">scholars@lehigh.edu</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="border-t border-lehighBrown/30 mt-8 pt-8 text-center">
+        <p>&copy; 2023 Lehigh Rising Scholars Journal. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
